@@ -2,7 +2,7 @@
     "name": "pausch/craft-rapidmail-subscribe",
     "description": "Craft 3.x plugin to subscribe users to a RapidMail mailing list",
     "type": "craft-plugin",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "keywords": [
         "craft",
         "cms",
