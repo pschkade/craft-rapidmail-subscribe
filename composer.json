@@ -1,0 +1,45 @@
+{
+    "name": "pausch/rapidmail-subscribe",
+    "description": "Subscribe users to a RapidMail mailing list",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "rapidmail-subscribe"
+    ],
+    "support": {
+        "docs": "https://github.com/dyrden/rapidmail-subscribe/blob/master/README.md",
+        "issues": "https://github.com/dyrden/rapidmail-subscribe/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paul Schkade",
+            "homepage": "https://github.com/dyrden"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0",
+        "rapidmail/rapidmail-apiv3-client-php": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "pausch\\rapidmailsubscribe\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Rapidmail Subscribe",
+        "handle": "rapidmail-subscribe",
+        "developer": "Paul Schkade",
+        "developerUrl": "http://www.paulschkade.net",
+        "documentationUrl": "https://github.com/dyrden/rapidmail-subscribe/blob/master/README.md",
+        "changelogUrl": "https://raw.githubusercontent.com/dyrden/rapidmail-subscribe/master/CHANGELOG.md",
+        "components": {
+            "rapidmailSubscribeService": "pausch\\rapidmailsubscribe\\services\\RapidmailSubscribeService"
+        },
+        "class": "pausch\\rapidmailsubscribe\\Rapidmailsubscribe"
+    }
+}

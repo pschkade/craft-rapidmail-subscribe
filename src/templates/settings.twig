@@ -1,0 +1,47 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * rapidmail-subscribe plugin for Craft CMS 3.x
+ *
+ * rapidmail-subscribe Settings.twig
+ *
+ * @author    Paul Schkade
+ * @copyright Copyright (c) 2020 Paul Schkade
+ * @link      http://www.paulschkade.net
+ * @package   Rapidmailsubscribe
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("pausch\\rapidmailsubscribe\\assetbundles\\rapidmailsubscribe\\RapidmailsubscribeAsset") %}
+
+{{ forms.textField({
+    label: 'User Name',
+    instructions: 'Create a new API account at https://my.rapidmail.de/api/v3/userlist.html and enter the username here.',
+    id: 'username',
+    name: 'username',
+    value: settings['username']})
+}}
+{{ forms.textField({
+    label: 'Password',
+    instructions: 'The same API account\'s password',
+    id: 'password',
+    name: 'password',
+    value: settings['password']})
+}}
+{{ forms.textField({
+    label: 'Recipient list ID',
+    instructions: 'Set the recipient list ID for the whole site. Can be overwritten by the subscribe form',
+    id: 'recipientlist_id',
+    name: 'recipientlist_id',
+    value: settings['recipientlist_id']})
+}}
+{{ forms.checkboxField({
+    label: 'Send activation email',
+    instructions: 'Set double opt-in for the whole site. Can be overwritten by the subscribe form',
+    id: 'send_activationmail',
+    name: 'send_activationmail',
+    checked: settings['send_activationmail']})
+}) }}
